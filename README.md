@@ -21,8 +21,7 @@ Supports any `comparable` type—integers, strings, structs, and more.
 ```sh
 go get github.com/sidsrbh/set
 ```
-
-*(Replace `github.com/sidsrbh/set` with your actual repo path)*
+---
 
 ---
 
