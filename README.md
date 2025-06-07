@@ -32,7 +32,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yourusername/set"
+	"github.com/sidsrbh/set"
 )
 
 func main() {
