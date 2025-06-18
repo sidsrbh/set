@@ -102,6 +102,7 @@ func main() {
 * `IsSubset(other *Set[T]) bool` — subset check
 * `IsSuperSet(other *Set[T]) bool` — superset check
 * `Equals(other *Set[T]) bool` — set equality
+* `PowerSet() [][]T` — returns Power set for a given set
 
 ### **Interfaces**
 
