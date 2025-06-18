@@ -118,6 +118,32 @@ func (s *Set[T]) Equals(other *Set[T]) bool {
 	return true
 }
 
+//PowerSet
+
+func (s *Set[T]) PowerSet() [][]T {
+	arr := []T{}
+	orders := [][]T{}
+	for i := range s.data {
+		arr = append(arr, i)
+	}
+
+	var subset func(array []T, idx int, current []T)
+	subset = func(array []T, idx int, current []T) {
+		if idx == len(array) {
+			// Make a copy of current, because slices are reused
+			tmp := make([]T, len(current))
+			copy(tmp, current)
+			orders = append(orders, tmp)
+			fmt.Println(tmp)
+			return
+		}
+		subset(array, idx+1, current)
+		subset(array, idx+1, append(current, array[idx]))
+	}
+	subset(arr, 0, []T{})
+	return orders
+}
+
 func (s *Set[T]) String() string {
 	elems := s.Elements()
 	setString := ""

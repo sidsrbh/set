@@ -88,5 +88,6 @@ func main() {
 	strSet.Add("apple")
 	strSet.Add("banana")
 	strSet.Add("cherry")
+	strSet.PowerSet()
 	fmt.Println("String Set:", strSet)
 }
